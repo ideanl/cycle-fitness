@@ -1,7 +1,0 @@
-development: &development
-  adapter: mysql2
-  host: localhost
-  username: root
-  password: '123'
-  encoding: utf8mb4
-  database: cyclefitness
