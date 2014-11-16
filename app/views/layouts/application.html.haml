@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title Cycle Fitness
+    %title #{page_title(@title)} || Cycle Fitness
     = stylesheet_link_tag "application", :media => "all", 'data-turbolinks-track' => true
     = javascript_include_tag "application", 'data-turbolinks-track' => true
     = csrf_meta_tag
@@ -19,5 +19,9 @@
                 .alert{class: "alert-#{key}"}
                   %button.close{type: :button, :'data-dismiss' => 'alert', href: '#'} &times;
                   %p= value
+
+        = content_for(:page_title)
+
         =yield
+
         = render 'footer'
