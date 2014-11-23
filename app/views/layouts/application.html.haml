@@ -1,14 +1,14 @@
 !!! 5
 %html
   %head
-    %title #{page_title(@title)} || Cycle Fitness
+    %title #{page_title} || Cycle Fitness
     %link{rel: 'icon', type: 'image/png', href: asset_path('favicon.png')}
     = stylesheet_link_tag "application", :media => "all", 'data-turbolinks-track' => true
     = javascript_include_tag "application", 'data-turbolinks-track' => true
     = csrf_meta_tag
     %meta{name: "viewport", content:"width=device-width, initial-scale=1.0"}
 
-  %body{style: 'height: 100%'}
+  %body{style: 'height: 100%', :'data-locale' => I18n.locale}
     = render 'header'
     
     .container
@@ -17,6 +17,8 @@
           #flash
             - if flash
               - flash.each do |key, value|
+                - key = "danger" if key == "alert"
+                - key = "success" if key == "notice"
                 .alert{class: "alert-#{key}"}
                   %button.close{type: :button, :'data-dismiss' => 'alert', href: '#'} &times;
                   %p= value

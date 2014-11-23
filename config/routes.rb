@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'home#index'
+  scope "(:locale)", locale: /en|es/ do
+    devise_for :users, controllers: { sessions: "sessions" }
 
-  get 'register' => 'users#new'
+    root to: 'home#index'
 
-  resources :users
+    get 'register' => 'users#new'
+
+    resources :users
+  end
 end

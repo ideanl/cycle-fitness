@@ -20,4 +20,40 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  views:
+    application:
+      home: "Home"
+      search: "Search"
+      admin_access: "Admin Access"
+      logout: "Logout"
+    home:
+      index:
+        title: "Under Construction"
+    users:
+      new:
+        title: "New Admin"
+    sessions:
+      new:
+        title: "Admin Login"
+        login: "Login"
+      create:
+        title: "Admin Login"
+        login: "Login"
+
+  activerecord:
+    model:
+      user: "Admin"
+    attributes:
+      user:
+        username: "Username"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        remember_me: "Remember Me"
+
+
+  helpers:
+    submit:
+      create: "<span class='glyphicon glyphicon-plus'></span> Create %{model}"
+      update: "Update %{model}"
+      submit: "Save %{model}"

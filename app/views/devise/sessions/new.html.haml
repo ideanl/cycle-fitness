@@ -1,0 +1,26 @@
+- @title = "Admin Login"
+- user_t = "activerecord.attributes.user"
+
+.col-sm-6.col-sm-offset-3
+  = form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-horizontal well' }) do |f|
+    .form-group
+      = f.label :email, class: 'col-sm-3 control-label'
+      .col-sm-9
+        = f.text_field :email, class: 'form-control', id: 'email', placeholder: I18n.t("#{user_t}.email")
+
+    .form-group
+      = f.label :password, class: 'col-sm-3 control-label'
+      .col-sm-9
+        = f.password_field :password, class: 'form-control', autocomplete: 'off', placeholder: I18n.t("#{user_t}.password")
+    - if devise_mapping.rememberable?
+      .form-group
+        .checkbox.col-sm-9.col-sm-offset-3
+          = f.label :remember_me do
+            = f.check_box :remember_me
+            = I18n.t("#{user_t}.remember_me")
+
+    .form-group
+      .col-sm-9.col-sm-offset-3
+        = f.button class: 'btn btn-primary' do
+          %span.glyphicon.glyphicon-ok
+          = I18n.t("views.#{params[:controller]}.new.login")

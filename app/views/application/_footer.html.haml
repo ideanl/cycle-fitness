@@ -1,4 +1,13 @@
 %footer
   %p Cycle Fitness &copy;
+  %form.form-inline
+    .form-group{style: 'margin-left: -75px'}
+      %label.control-label{for: 'locale'} Language
+      %select#locale{autocomplete: 'off'}
+        %option{value: 'en', selected: (params[:locale] == 'en')} English
+        %option{value: 'es', selected: (params[:locale] == 'es')} Spanish
   %p
-    %a Admin Access
+    - if !user_signed_in?
+      %a{href: new_user_session_path}= I18n.t("views.application.admin_access")
+    - else
+      = link_to I18n.t("views.application.logout"), destroy_user_session_path, method: :delete

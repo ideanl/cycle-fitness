@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   #New User Action
   def new
-    @title = "New Admin"
     @user = User.new
   end
 
