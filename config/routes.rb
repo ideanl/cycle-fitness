@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
     get 'register' => 'users#new'
 
+    get 'shop' => 'shop#index'
+
+    resources :products, except: 'index'
     resources :users
   end
 end

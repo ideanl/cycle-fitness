@@ -6,7 +6,6 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      /= link_to "Cycle Fitness", root_path, class: 'navbar-brand'
       %a.navbar-brand{href: root_path, style: 'padding:0px'}
         %img{alt: 'Cycle Fitness', src: asset_path('logo.png'), height: '61px'}
 
@@ -18,19 +17,27 @@
             %span.glyphicon.glyphicon-home
             %span.small= I18n.t "views.application.home"
 
+        %li
+          = link_to "#" do
+            %span.glyphicon.glyphicon-ok
+            %span.small= I18n.t "views.application.home"
+
         - if user_signed_in?
           %li.dropdown
             %a.dropdown-toggle{type: :button, :'data-toggle' => 'dropdown', href: '#'}
-              %span.glyphicon.glyphicon-user
-              %span.small= current_user.username
+              %span.glyphicon.glyphicon-cog
+              %span.small= I18n.t("views.application.admin")
               %span.glyphicon.glyphicon-chevron-down
                 %ul.dropdown-menu{role: :menu, :'aria-labelledby' => 'dropdown-people'}
                   %li{role: :presentation}
-                    %a{href: "#", role: :menuitem, :'tab-index' => '-1'}
-                      Placeholder
-                  %li{role: :presentation}
                     %a{href: '#', role: :menuitem, :'tab-index' => '-1'}
-                      Placeholder
+                      %span.glyphicon.glyphicon-plus
+                      =I18n.t("views.application.admin_drop.new_product")
+
+                  %li{role: :presentation}
+                    %a{href: register_path, role: :menuitem, :'tab-index' => '-1'}
+                      %span.glyphicon.glyphicon-plus
+                      = I18n.t("views.application.admin_drop.new_admin")
                   %li{role: :presentation}
                     %a{href: '#', role: :menuitem, :'tab-index' => '-1'}
                       Placeholder

@@ -2,6 +2,10 @@ es:
   views:
     application:
       home: "Inicio"
+      admin: "TRANSLATE"
+      admin_drop:
+        new_product: "TRANSLATAE"
+        new_admin: "TRANSLATE"
       search: "Busca"
       admin_access: "TRANSLATE"
       logout: "TRANSLATE"
@@ -15,13 +19,17 @@ es:
       new:
         title: "TRANSLATE"
         login: "TRANSLATE"
-      create:
+    products:
+      new:
         title: "TRANSLATE"
-        login: "TRANSLATE"
+      edit:
+        title: "TRANSLATE"
+
 
   activerecord:
     model:
       user: "El Administrador"
+      product: "TRANSLATE"
     attributes:
       user:
         username: "Nombre de Usuario"
@@ -29,8 +37,13 @@ es:
         password: "Contraseña"
         password_confirmation: "Confirmación de la Contraseña"
         remember_me: "Recuérdame"
+      product:
+        name: "Nombre"
 
   helpers:
+    error:
+      create: "TRANSLATE"
+      update: "TRANSLATE"
     submit:
       create: "Translate"
       update: "Translate"

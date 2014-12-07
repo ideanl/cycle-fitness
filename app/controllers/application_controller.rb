@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   # Displays flash error for failed object saves
   def flash_errors(object)
     errors = object.errors.full_messages
-    flash.now[:danger] = "Could not #{object.new_record? ? 'create' : 'update'} #{controller_name.singularize}. Error#{'s' unless errors.length == 1}: #{errors.join('. ')}."
+        flash.now[:danger] = "#{I18n.t("helpers.error.#{object.new_record? ? 'create' : 'update'}", controller: controller_name.singularize)} Error#{'s' unless errors.length == 1}: #{errors.join('. ')}."
   end
 
   def default_url_options(options={})
