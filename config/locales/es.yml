@@ -7,11 +7,12 @@ es:
         new_product: "TRANSLATAE"
         new_admin: "TRANSLATE"
       search: "Busca"
+      language: "TRANSLATE"
       admin_access: "TRANSLATE"
       logout: "TRANSLATE"
     home:
       index:
-        title: "En Construcción"
+        title: ""
     users:
       new:
         title: "Nuevo Administrador"

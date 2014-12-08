@@ -1,4 +1,4 @@
-%nav.small-nav.navbar-inverse.navbar{role: :navigation}
+%nav.small-nav.navbar-inverse.navbar{role: :navigation, style: 'margin: 0px;'}
   .container
     .navbar-header.white-border-right
       %button.navbar-toggle{type: :button, :'data-toggle' => 'collapse', :'data-target' => '#main-navbar-collapse'}
@@ -45,6 +45,11 @@
                     %a{href: "#", role: :menuitem, :'tab-index' => '-1'}
                       Placeholder
 
+        %li{style: 'margin-top: 20px'}
+          %span.small= I18n.t("views.application.language")
+          %select#locale{autocomplete: 'off'}
+            %option{value: 'en', selected: (params[:locale] == 'en')} English
+            %option{value: 'es', selected: (params[:locale] == 'es')} Spanish
 
       .navbar-form.navbar-right{role: 'search'}
         .form-group

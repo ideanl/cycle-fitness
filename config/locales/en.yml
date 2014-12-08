@@ -7,11 +7,12 @@ en:
         new_product: "New Product"
         new_admin: "New Admin"
       search: "Search"
+      language: "Language"
       admin_access: "Admin Access"
       logout: "Logout"
     home:
       index:
-        title: "Under Construction"
+        title: ""
     users:
       new:
         title: "New Admin"

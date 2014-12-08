@@ -10,8 +10,11 @@ module ApplicationHelper
     end
 
     title = I18n.t("views.#{params[:controller]}.#{action}.title", default: params[:controller].capitalize)
-    content_for :page_title do
-      "<h1 class='text-center'>#{title}</h1>".html_safe
+
+    if !content_for :page_title
+      content_for :page_title do
+        "<h1 class='text-center'>#{title}</h1>".html_safe
+      end
     end
     title
   end

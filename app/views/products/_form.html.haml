@@ -1,0 +1,10 @@
+- url = @product.new_record? ? products_path : product_path(@product)
+- product_t = "activerecord.attributes.product"
+= form_for @product, url: url, html: { class: "form-horizontal well col-sm-8 col-sm-offset-2" } do |f|
+  .form-group
+    .col-sm-10.col-sm-offset-1
+      = f.text_field :name, class: 'form-control', id: 'name', placeholder: I18n.t("#{product_t}.name")
+
+  .form-group
+    .col-sm-9.col-sm-offset-1
+      = f.button I18n.t("helpers.submit.#{@product.new_record? ? 'create' : 'update'}", model: I18n.t('activerecord.model.product')).html_safe, class: 'btn btn-primary'

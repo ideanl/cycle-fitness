@@ -1,0 +1,6 @@
+%ul
+  - if @products.length == 0
+    There are no products to display.
+  - else
+    - @products.each do |product|
+      %li= product.name
