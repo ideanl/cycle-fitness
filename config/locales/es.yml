@@ -13,6 +13,7 @@ es:
     home:
       index:
         title: ""
+        black1: "<h2>TRANSLATE</h2><h4>TRANSLATE</h4>"
     users:
       new:
         title: "Nuevo Administrador"
