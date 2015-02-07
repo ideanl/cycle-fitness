@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require header
 //= require bootstrap
+//= require ie
 //= require_tree .
