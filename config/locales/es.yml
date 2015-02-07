@@ -2,7 +2,7 @@ es:
   views:
     application:
       home: "Inicio"
-      q_and_a: "TRANSLATE"
+      questions: "TRANSLATE"
       admin: "TRANSLATE"
       admin_drop:
         new_product: "TRANSLATAE"
@@ -26,6 +26,7 @@ es:
           title: "TRANSLATE"
           login: "TRANSLATE"
     questions:
+      admin: "TRANSLATE"
       actions:
         index:
           title: "TRANSLATE"

@@ -2,7 +2,7 @@ en:
   views:
     application:
       home: "Home"
-      q_and_a: "Q & A"
+      questions: "Q & A"
       admin: "Admin"
       admin_drop:
         new_product: "New Product"
