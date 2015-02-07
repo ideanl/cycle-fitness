@@ -2,6 +2,7 @@ es:
   views:
     application:
       home: "Inicio"
+      q_and_a: "TRANSLATE"
       admin: "TRANSLATE"
       admin_drop:
         new_product: "TRANSLATAE"

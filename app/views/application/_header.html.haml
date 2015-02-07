@@ -18,9 +18,9 @@
             %span.small= I18n.t "views.application.home"
 
         %li
-          = link_to "#" do
-            %span.glyphicon.glyphicon-ok
-            %span.small= I18n.t "views.application.home"
+          = link_to q_and_a_path do
+            %span.glyphicon.glyphicon-question-sign
+            %span.small= I18n.t "views.application.q_and_a"
 
         - if user_signed_in?
           %li.dropdown
