@@ -9,11 +9,16 @@ module ApplicationHelper
       action = params[:action]
     end
 
-    title = I18n.t("views.#{params[:controller]}.#{action}.title", default: params[:controller].capitalize)
+    title = I18n.t("views.#{params[:controller]}.actions.#{action}.title", default: params[:controller].capitalize)
 
     if !content_for :page_title
       content_for :page_title do
-        "<h1 class='text-center'>#{title}</h1>".html_safe
+        admin = I18n.t("views.#{params[:controller]}.admin", default: "")
+        button = ""
+        if !admin.blank? && current_user && current_user.logged_in?
+          button = "<button style='margin-left: 10px;' class='btn btn-success btn-sm'>#{admin}</button>"
+        end
+        "<h1 class='text-center'>#{title}#{button}</h1>".html_safe
       end
     end
     title
