@@ -39,8 +39,9 @@
                       %span.glyphicon.glyphicon-plus
                       = I18n.t("views.application.admin_drop.new_admin")
                   %li{role: :presentation}
-                    %a{href: '#', role: :menuitem, :'tab-index' => '-1'}
-                      Placeholder
+                    %a{href: destroy_user_session_path, :'data-method' => 'delete', role: :menuitem, :'tab-index' => '-1'}
+                      %span.glyphicon.glyphicon-log-out
+                      = I18n.t("views.application.logout")
                   %li{role: :presentation}
                     %a{href: "#", role: :menuitem, :'tab-index' => '-1'}
                       Placeholder
