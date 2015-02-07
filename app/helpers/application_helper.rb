@@ -15,7 +15,7 @@ module ApplicationHelper
       content_for :page_title do
         admin = I18n.t("views.#{params[:controller]}.admin", default: "")
         button = ""
-        if !admin.blank? && current_user && current_user.logged_in?
+        if !admin.blank? && params[:action] == "index" && user_signed_in?
           button = "<a href='/#{params[:controller]}/new' style='margin-left: 10px;' class='btn btn-success btn-sm'>#{admin}</a>"
         end
         "<h1 class='text-center'>#{title}#{button}</h1>".html_safe

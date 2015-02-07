@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   end
 
   def require_login
-    if !current_user || !current_user.logged_in?
+    if !current_user || !user_signed_in?
       redirect_to root_url
     end
   end

@@ -30,6 +30,8 @@ es:
       actions:
         index:
           title: "TRANSLATE"
+        new:
+          title: "TRANSLATE"
     products:
       actions:
         new:

@@ -30,6 +30,8 @@ en:
       actions:
         index:
           title: "Q & A"
+        new:
+          title: "Add Question"
     products:
       actions:
         new:
