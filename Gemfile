@@ -10,6 +10,7 @@ gem 'haml'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'mysql2'
+gem 'puma'
 gem 'rails', '4.1.4'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc
