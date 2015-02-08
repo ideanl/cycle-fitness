@@ -11,6 +11,9 @@ module Inj
 
     config.i18n.fallbacks = true
     config.i18n.fallbacks = [:en]
+    Dir.glob("#{Rails.root}/app/assets/images/**/").each do |path|
+      config.assets.paths << path
+    end
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

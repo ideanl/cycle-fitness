@@ -15,7 +15,7 @@ en:
       actions:
         index:
           title: ""
-          black1: "<h2>Welcome to Cycle Fitness</h2><h4>Your local bike shop, here to see to your biking needs and help everyone in our community get out on a bicycle with friends and family.</h4>"
+          black1: "<h1>Cycle Fitness</h1><h4>Your local bike shop, here to see to your biking needs and help everyone in our community get out on a bicycle with friends and family.</h4>"
     users:
       actions:
         new:

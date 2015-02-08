@@ -1,2 +1,5 @@
-.blackback
+= content_for :outside_container do
+  .slideshow
+    = @image_divs.html_safe
+.caption
   = I18n.t("views.home.actions.index.black1").html_safe
