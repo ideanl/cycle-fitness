@@ -1,4 +1,4 @@
-$(document).on('page:change', function() {
+$(document).on('ready page:change', function() {
   $(document).on('click', '.change-image', function(e) {
     $('.image-upload').removeClass('hidden');
     $(this).addClass("hidden");

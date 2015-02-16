@@ -6,6 +6,8 @@
     = stylesheet_link_tag "application", :media => "all", 'data-turbolinks-track' => true
     
     = javascript_include_tag "application", 'data-turbolinks-track' => true
+    /[if lt IE 9]
+      = "<script src='#{asset_path('ie.js')}' type='text/javascript' data-turbolinks-track=true></script>".html_safe
     = csrf_meta_tag
     %meta{name: "viewport", content:"width=device-width, initial-scale=1.0"}
 

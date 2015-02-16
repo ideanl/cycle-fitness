@@ -16,5 +16,4 @@
 //= require header
 //= require bootstrap
 //= require common
-//= require ie
 //= require_tree .
