@@ -2,10 +2,17 @@
 $(document).on('page:change', function() {
   index_max = $('.slideshow-img').length - 1
   index = index_max;
+  last_index = 0;
+
   // Switch image every five seconds creating slideshow.
   window.setInterval(function(){
-    $('#image' + index).fadeToggle()
-    if(index-- == 1)
-      index = index_max; 
+    $('#image' + last_index).toggle();
+
+    $('#image' + index).fadeToggle();
+
+    last_index = index;
+    if(index-- == 0) {
+      index = index_max;
+    }
   },6000);
 });
