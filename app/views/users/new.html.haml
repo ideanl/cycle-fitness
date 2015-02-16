@@ -1,3 +1,7 @@
+- content_for :images do
+  - prep_slideshow
+  = @image_divs.html_safe
+
 .col-xs-12.col-sm-6.col-sm-offset-3
   - new = @user.new_record?
   - url = new ? users_path : user_path(@user)
