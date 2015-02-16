@@ -33,7 +33,7 @@ module ApplicationHelper
     end
     @image_divs = ''
     @image_paths.each_with_index do | path, index |
-      @image_divs << "<div class='slideshow-img' id='image#{index}' style='background: url(#{asset_path(path)});#{"display:none;" if index != 0}'></div>"
+      @image_divs << "<div class='slideshow-img' id='image#{index}' style='background: url(#{asset_path("slideshow/#{path}")});#{"display:none;" if index != 0}'></div>"
     end
   end
 end
