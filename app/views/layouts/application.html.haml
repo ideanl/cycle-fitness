@@ -12,19 +12,20 @@
     = render 'header'
     
     .jumbotron#home-bg
-      = content_for :outside_container
-      .container#main-container
-        .row
-          .col-xs-12
-            #flash
-              - if flash
-                - flash.each do |key, value|
-                  - key = "danger" if key == "alert"
-                  - key = "success" if key == "notice"
-                  .alert{class: "alert-#{key}"}
-                    %button.close{type: :button, :'data-dismiss' => 'alert', href: '#'} &times;
-                    %p= value
+      .slideshow
+        = content_for :images
+        .container#main-container
+          .row
+            .col-xs-12
+              #flash
+                - if flash
+                  - flash.each do |key, value|
+                    - key = "danger" if key == "alert"
+                    - key = "success" if key == "notice"
+                    .alert{class: "alert-#{key}"}
+                      %button.close{type: :button, :'data-dismiss' => 'alert', href: '#'} &times;
+                      %p= value
 
-          = content_for(:page_title)
+            = content_for(:page_title)
 
           =yield
