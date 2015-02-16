@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
     get 'shop' => 'shop#index'
 
+    resources :questions
+
     resources :products, except: 'index'
     resources :users
   end

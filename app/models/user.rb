@@ -9,9 +9,4 @@ class User < ActiveRecord::Base
   validates :username, :email, uniqueness: true, presence: true
   validates :password, :password_confirmation, presence: true, length: { minimum: 7 }
   validates :email, format: { with: VALID_EMAIL_REGEX }
-
-  def can?(action, target)
-    @ability ||= Ability.new self
-    @ability.can? action, target
-  end
 end

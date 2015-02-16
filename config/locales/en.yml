@@ -2,6 +2,7 @@ en:
   views:
     application:
       home: "Home"
+      questions: "Q & A"
       admin: "Admin"
       admin_drop:
         new_product: "New Product"
@@ -11,26 +12,38 @@ en:
       admin_access: "Admin Access"
       logout: "Logout"
     home:
-      index:
-        title: ""
-        black1: "<h2>Welcome to Cycle Fitness</h2><h4>Your local bike shop, here to see to your biking needs and help everyone in our community get out on a bicycle with friends and family.</h4>"
+      actions:
+        index:
+          title: ""
+          black1: "<h1>Cycle Fitness</h1><h4>Your local bike shop, here to see to your biking needs and help everyone in our community get out on a bicycle with friends and family.</h4>"
     users:
-      new:
-        title: "New Admin"
+      actions:
+        new:
+          title: "New Admin"
     sessions:
-      new:
-        title: "Admin Login"
-        login: "Login"
+      actions:
+        new:
+          title: "Admin Login"
+          login: "Login"
+    questions:
+      admin: "Add Question"
+      actions:
+        index:
+          title: "Q & A"
+        new:
+          title: "Add Question"
     products:
-      new:
-        title: "New Product"
-      edit:
-        title: "Edit Product"
+      actions:
+        new:
+          title: "New Product"
+        edit:
+          title: "Edit Product"
 
   activerecord:
     model:
       user: "Admin"
       product: "Product"
+      question: "Question"
     attributes:
       user:
         username: "Username"
@@ -40,6 +53,9 @@ en:
         remember_me: "Remember Me"
       product:
         name: "Name"
+      question:
+        question: "Question"
+        answer: "Answer"
 
 
   helpers:

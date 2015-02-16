@@ -1,0 +1,33 @@
+- content_for :images do
+  - prep_slideshow
+  = @image_divs.html_safe
+
+= form_for @question, multipart: true, html: { class: 'form-horizontal well' } do |f|
+  %div#box1{class: "col-xs-12 col-sm-6 #{@question.new_record? ? "col-sm-offset-3" : ""}"}
+    - question_t = "activerecord.attributes.question"
+
+    .form-group
+      .col-sm-10.col-sm-offset-1 
+        = f.text_field :question, class: 'form-control', id: 'question', placeholder: I18n.t("#{question_t}.question")
+
+    .form-group
+      .col-sm-10.col-sm-offset-1 
+        = f.text_field :answer, class: 'form-control', id: 'answer', placeholder: I18n.t("#{question_t}.answer")
+
+    .form-group
+      .col-sm-10.col-sm-offset-1
+        - hidden = ""
+        - if !@question.new_record?
+          %button.btn.btn-success.change-image{type: :button} Change Image
+          - hidden = "hidden"
+        = f.file_field :image, accept: 'image/png,image/jpg,image/jpeg,image/bmp,image/gif', class: "form-control image-upload #{hidden}"
+
+    .form-group
+      .col-sm-6.col-sm-offset-1
+        = f.button I18n.t("helpers.submit.create", model: I18n.t('activerecord.model.question')).html_safe, class: "btn btn-primary"
+
+
+.col-xs-12.col-sm-6
+  - hidden = @question.new_record? ? "hidden" : ""
+  %div{class: "#{hidden} thumbnail form-img-preview"}
+    %img{src: !@question.new_record? ? @question.image_path : '', 'data-turbolinks' => true }

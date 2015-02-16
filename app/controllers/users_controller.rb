@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  include Editable
+
   #New User Action
   def new
     @user = User.new

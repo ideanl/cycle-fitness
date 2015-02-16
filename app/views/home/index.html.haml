@@ -1,2 +1,7 @@
-.blackback
-  = I18n.t("views.home.index.black1").html_safe
+- content_for :images do
+  - prep_slideshow
+  = @image_divs.html_safe
+
+
+.caption
+  = I18n.t("views.home.actions.index.black1").html_safe

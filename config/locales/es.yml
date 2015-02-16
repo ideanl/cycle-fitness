@@ -2,6 +2,7 @@ es:
   views:
     application:
       home: "Inicio"
+      questions: "TRANSLATE"
       admin: "TRANSLATE"
       admin_drop:
         new_product: "TRANSLATAE"
@@ -11,22 +12,32 @@ es:
       admin_access: "TRANSLATE"
       logout: "TRANSLATE"
     home:
-      index:
-        title: ""
-        black1: "<h2>TRANSLATE</h2><h4>TRANSLATE</h4>"
+      actions:
+        index:
+          title: ""
+          black1: "<h2>TRANSLATE</h2><h4>TRANSLATE</h4>"
     users:
-      new:
-        title: "Nuevo Administrador"
+      actions:
+        new:
+          title: "Nuevo Administrador"
     sessions:
-      new:
-        title: "TRANSLATE"
-        login: "TRANSLATE"
+      actions:
+        new:
+          title: "TRANSLATE"
+          login: "TRANSLATE"
+    questions:
+      admin: "TRANSLATE"
+      actions:
+        index:
+          title: "TRANSLATE"
+        new:
+          title: "TRANSLATE"
     products:
-      new:
-        title: "TRANSLATE"
-      edit:
-        title: "TRANSLATE"
-
+      actions:
+        new:
+          title: "TRANSLATE"
+        edit:
+          title: "TRANSLATE"
 
   activerecord:
     model:
@@ -41,6 +52,10 @@ es:
         remember_me: "Recuérdame"
       product:
         name: "Nombre"
+      question:
+        question: "TRANSLATE"
+        answer: "TRANSLATE"
+
 
   helpers:
     error:

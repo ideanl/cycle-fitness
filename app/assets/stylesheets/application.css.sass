@@ -1,7 +1,7 @@
-@import "bootswatch/sandstone/variables"
+@import "bootswatch/paper/variables"
 @import "bootstrap-sprockets"
 @import "bootstrap"
-@import "bootswatch/sandstone/bootswatch"
+@import "bootswatch/paper/bootswatch"
 @import "footer"
 @import "home"
 
@@ -9,7 +9,7 @@ html, body
   height: 100%
 
 body
-  background-color: black
+  background-color: white
 
 #home-bg
   height: 100%
@@ -18,8 +18,18 @@ body
   padding-top: 64px
   margin-top: -64px
 
+
+.home #home-bg
+  background: rgb(255,255,255)
+
 #main-container
   position: relative
-  background-color: white
-  background: rgba(255, 255, 255, 0.85)
+  background-color: black
+  background: rgba(255, 255, 255, 0.9)
   height: 100%
+
+  form
+    background-color: inherit
+
+.jumbotron
+  background-color: white

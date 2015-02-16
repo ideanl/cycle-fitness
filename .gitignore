@@ -9,6 +9,8 @@ capybara-*.html
 /spec/tmp
 /config/database.yml
 /config/secrets.yml
+/public/files/*/*
+!/public/files/*/.keep
 *sw*
 **.orig
 rerun.txt
