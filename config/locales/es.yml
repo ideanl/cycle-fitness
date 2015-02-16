@@ -39,7 +39,6 @@ es:
         edit:
           title: "TRANSLATE"
 
-
   activerecord:
     model:
       user: "El Administrador"
@@ -53,6 +52,10 @@ es:
         remember_me: "Recuérdame"
       product:
         name: "Nombre"
+      question:
+        question: "TRANSLATE"
+        answer: "TRANSLATE"
+
 
   helpers:
     error:

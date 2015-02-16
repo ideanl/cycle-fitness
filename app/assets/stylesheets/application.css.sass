@@ -1,7 +1,7 @@
-@import "bootswatch/sandstone/variables"
+@import "bootswatch/paper/variables"
 @import "bootstrap-sprockets"
 @import "bootstrap"
-@import "bootswatch/sandstone/bootswatch"
+@import "bootswatch/paper/bootswatch"
 @import "footer"
 @import "home"
 
@@ -24,18 +24,12 @@ body
 
 #main-container
   position: relative
-  background-color: white
-  background: rgba(255, 255, 255, 0.85)
+  background-color: black
+  background: rgba(255, 255, 255, 0.9)
   height: 100%
+
+  form
+    background-color: inherit
 
 .jumbotron
   background-color: white
-
-.navbar
-  background-image: none
-  border-radius: 0
-  background-color: #e0e0e0
-  border: lightgray
-
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus
-  background-color: gray

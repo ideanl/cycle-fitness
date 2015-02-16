@@ -1,5 +1,5 @@
 // Ensure DOM elements have been loaded before trying to access them
-$(document).ready(function(){
+$(document).on('page:change', function() {
   index_max = $('.slideshow-img').length - 1
   index = index_max;
   // Switch image every five seconds creating slideshow.

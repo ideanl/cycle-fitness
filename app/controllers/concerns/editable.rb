@@ -17,6 +17,24 @@ module Editable
       end
     end
 
+    def edit
+
+    end
+
+    def update
+      if model_instance.update_attributes(self.send("#{model_name}_params"))
+        redirect_success
+      else
+        flash_errors
+        render 'edit'
+      end
+      
+    end
+
+    def destroy
+
+    end
+
   private
     def model_name
       controller_name.singularize
@@ -33,6 +51,17 @@ module Editable
       else
         redirect_index msg
       end
+    end
+
+    def load_model
+      instance_variable_set("@#{model_name}", model_class.find(params[:id]))
+      unless model_instance
+        raise ActiveRecord::RecordNotFound
+      end
+    end
+
+    def model_instance
+      instance_variable_get("@#{model_name}")
     end
 
     def redirect_index(message = nil)
@@ -57,6 +86,7 @@ module Editable
     end
 
   included do
-    before_filter :require_login, only: [:new, :create]
+    before_action :load_model, only: [:edit, :update, :destroy]
+    before_filter :require_login, only: [:new, :create, :edit, :update, :destroy]
   end
 end

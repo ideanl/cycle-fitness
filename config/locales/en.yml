@@ -43,6 +43,7 @@ en:
     model:
       user: "Admin"
       product: "Product"
+      question: "Question"
     attributes:
       user:
         username: "Username"
@@ -52,6 +53,9 @@ en:
         remember_me: "Remember Me"
       product:
         name: "Name"
+      question:
+        question: "Question"
+        answer: "Answer"
 
 
   helpers:
