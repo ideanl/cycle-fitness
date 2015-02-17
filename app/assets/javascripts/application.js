@@ -16,4 +16,5 @@
 //= require header
 //= require bootstrap
 //= require common
+//= require autosize
 //= require_tree .

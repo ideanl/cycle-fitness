@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
     @questions = Question.all
   end
 
+
   private
 
     def question_params

@@ -23,7 +23,10 @@ module Editable
 
     def update
       if model_instance.update_attributes(self.send("#{model_name}_params"))
-        redirect_success
+        respond_to do | format |
+          format.html{ redirect_success }
+          format.json { render json: {message: 'success'} }
+        end
       else
         flash_errors
         render 'edit'
@@ -32,7 +35,14 @@ module Editable
     end
 
     def destroy
-
+      if model_class.find(params[:id]).destroy
+        respond_to do | format |
+          format.html{ redirect_success }
+          format.json { render json: {message: 'success'} }
+        end
+      else
+        flash_errors
+      end
     end
 
   private

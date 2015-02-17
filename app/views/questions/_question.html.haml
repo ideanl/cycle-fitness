@@ -1,7 +1,14 @@
-.question-card{style: 'width:100%'}
+.question-card
   .top
-    .image
-      .image{style: "background-image: url(#{question.image_path})"}
+    -if user_signed_in?
+      .options{"data-id" => question.id}
+        .dark
+        .glyphs
+          .glyphicon.glyphicon-floppy-disk{style: "margin-right: 4px"}
+          .glyphicon.glyphicon-pencil{style: "margin-right: 4px"}
+          .glyphicon.glyphicon-trash
+    .image{style: "background-image: url(#{question.image_path})"}
+      .overlay
   .bottom
     .question
       %p
