@@ -2,15 +2,15 @@ es:
   views:
     application:
       home: "Inicio"
-      questions: "TRANSLATE"
-      admin: "TRANSLATE"
+      questions: "Preguntas y Respuestas"
+      admin: "Admón"
       admin_drop:
-        new_product: "TRANSLATAE"
-        new_admin: "TRANSLATE"
+        new_product: "Producto Nuevo"
+        new_admin: "Admón Nuevo"
       search: "Busca"
-      language: "TRANSLATE"
-      admin_access: "TRANSLATE"
-      logout: "TRANSLATE"
+      language: "Idioma"
+      admin_access: "Acceso de Admón"
+      logout: "Cierre de Sesión"
     home:
       actions:
         index:

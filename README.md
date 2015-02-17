@@ -1,4 +1,4 @@
-inj
+SIN
 ===
 
-Secret Website for now ;)
+Super dank secret website for cool kids ONLY.
