@@ -1,6 +1,9 @@
-- @questions.each do |question|
-  %p
-    %strong Question: 
-    = question.question
+.col-xs-6
+  - @questions.each_with_index do |question, index|
+    - if index % 2 == 0
+      = render partial: 'question', locals: { question: question }
 
-
+.col-xs-6
+  - @questions.each_with_index do |question, index|
+    - if index % 2 == 1
+      = render partial: 'question', locals: { question: question }

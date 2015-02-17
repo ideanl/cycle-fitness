@@ -1,6 +1,4 @@
 class Question < ActiveRecord::Base
   include AttachedImage
-
-  validates :image, presence: true
-  validates :question, :answer, uniqueness: true, presence: true
+  validates :question, :answer, presence: true
 end

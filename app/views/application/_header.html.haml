@@ -46,7 +46,7 @@
                     %a{href: "#", role: :menuitem, :'tab-index' => '-1'}
                       Placeholder
 
-        %li{style: 'margin-top: 20px'}
+        %li{style: 'margin-top: 20px; margin-left: 10px'}
           %span.small= I18n.t("views.application.language")
           %select#locale{autocomplete: 'off'}
             %option{value: 'en', selected: (params[:locale] == 'en')} English
