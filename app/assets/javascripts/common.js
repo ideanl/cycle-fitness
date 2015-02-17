@@ -1,4 +1,4 @@
-$(document).on('ready page:change', function() {
+$(document).on('page:change', function() {
   $(document).on('click', '.change-image', function(e) {
     $('.image-upload').removeClass('hidden');
     $(this).addClass("hidden");
@@ -17,4 +17,6 @@ $(document).on('ready page:change', function() {
       reader.readAsDataURL(this.files[0]);
     }
   });
+
+  Turbolinks.enableProgressBar();
 });
