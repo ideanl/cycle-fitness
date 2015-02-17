@@ -2,7 +2,7 @@ en:
   views:
     application:
       home: "Home"
-      questions: "Q & A"
+      questions: "FAQ"
       admin: "Admin"
       admin_drop:
         new_product: "New Product"
@@ -29,7 +29,7 @@ en:
       admin: "Add Question"
       actions:
         index:
-          title: "Q & A"
+          title: "Questions & Answers"
         new:
           title: "Add Question"
     products:
