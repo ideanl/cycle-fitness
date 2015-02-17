@@ -2,7 +2,7 @@ es:
   views:
     application:
       home: "Inicio"
-      questions: "Preguntas y Respuestas"
+      questions: "TRANSLATE"
       admin: "Admón"
       admin_drop:
         new_product: "Producto Nuevo"
