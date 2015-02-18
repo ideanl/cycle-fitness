@@ -22,14 +22,13 @@ $(document).on('page:change', function(){
 
   $('.glyphicon-floppy-disk').click(function(e){
     options = $(this).parents('.options');
-    console.log('hello')
     id = options.data('id');
     if(options.data('delete')){
       $.ajax({
         type: "DELETE",
         url: "/en/questions/" + id + '.json'
       }).success(function(){
-          location.reload()
+        Turbolinks.visit(window.location.href);
       }) 
     } else if(options.data('edit')){
       questionDiv = $(this).parents('.question-card').children('.bottom').children('.question');
