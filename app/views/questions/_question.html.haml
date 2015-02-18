@@ -4,9 +4,11 @@
       .options{"data-id" => question.id}
         .dark
         .glyphs
-          .glyphicon.glyphicon-floppy-disk{style: "margin-right: 4px"}
-          .glyphicon.glyphicon-pencil{style: "margin-right: 4px"}
-          .glyphicon.glyphicon-trash
+          - css_over = "$(this).css('color', '#666')"
+          - css_out = "$(this).css('color', 'white')"
+          .glyphicon.glyphicon-floppy-disk{style: "margin-right: 4px", onmouseover: css_over, onmouseout: css_out}
+          .glyphicon.glyphicon-pencil{style: "margin-right: 4px", onmouseover: css_over, onmouseout: css_out}
+          .glyphicon.glyphicon-trash{onmouseover: css_over, onmouseout: css_out}
     .image{style: "background-image: url(#{question.image_path})"}
       .overlay
   .bottom
