@@ -2,7 +2,7 @@ es:
   views:
     application:
       home: "Inicio"
-      questions: "TRANSLATE"
+      questions: "Preguntas Frecuentes"
       admin: "Admón"
       admin_drop:
         new_product: "Producto Nuevo"
@@ -15,33 +15,33 @@ es:
       actions:
         index:
           title: ""
-          black1: "<h2>TRANSLATE</h2><h4>TRANSLATE</h4>"
+          black1: "<h2>ciclo por salud</h2><h4>Su tienda de bicis del barrio, aqui para cumplir sus necesitas de bicicletas y ayudar a todos para ir en un bicicleta con amigos y familia.</h4>"
     users:
       actions:
         new:
-          title: "Nuevo Administrador"
+          title: "Nuevo Admón"
     sessions:
       actions:
         new:
-          title: "TRANSLATE"
-          login: "TRANSLATE"
+          title: "Login de Admón"
+          login: "Login"
     questions:
-      admin: "TRANSLATE"
+      admin: "Darle Pregunta"
       actions:
         index:
-          title: "TRANSLATE"
+          title: "Preguntas y Respuestas"
         new:
-          title: "TRANSLATE"
+          title: "Darle Pregunta"
     products:
       actions:
         new:
-          title: "TRANSLATE"
+          title: "Producto Nuevo"
         edit:
-          title: "TRANSLATE"
+          title: "Editar Producto"
 
   activerecord:
     model:
-      user: "El Administrador"
+      user: "Admón"
       product: "TRANSLATE"
     attributes:
       user:
@@ -53,15 +53,16 @@ es:
       product:
         name: "Nombre"
       question:
-        question: "TRANSLATE"
-        answer: "TRANSLATE"
+        question: "Pregunta"
+        answer: "Respuesta"
+
 
 
   helpers:
     error:
-      create: "TRANSLATE"
-      update: "TRANSLATE"
+      create: "Could not create %{controller}."
+      update: "Could not update %{controller}."
     submit:
-      create: "Translate"
-      update: "Translate"
-      submit: "Translate"
+      create: "<span class='glyphicon glyphicon-plus'></span> Create %{model}"
+      update: "Update %{model}"
+      submit: "Save %{model}"
