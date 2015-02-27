@@ -24,7 +24,7 @@ module Editable
     def update
       if model_instance.update_attributes(self.send("#{model_name}_params"))
         respond_to do | format |
-          format.html{ redirect_success }
+          format.html { redirect_success }
           format.json { render json: {message: 'success'} }
         end
       else
