@@ -11,7 +11,7 @@ capybara-*.html
 /config/secrets.yml
 /public/files/*/*
 !/public/files/*/.keep
-*sw*
+*.sw*
 **.orig
 rerun.txt
 pickle-email-*.html
