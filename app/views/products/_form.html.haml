@@ -1,10 +1,39 @@
-- url = @product.new_record? ? products_path : product_path(@product)
 - product_t = "activerecord.attributes.product"
-= form_for @product, url: url, html: { class: "form-horizontal well col-sm-8 col-sm-offset-2" } do |f|
-  .form-group
-    .col-sm-10.col-sm-offset-1
-      = f.text_field :name, class: 'form-control', id: 'name', placeholder: I18n.t("#{product_t}.name")
+= form_for @product, multipart: true, html: { class: "form-horizontal well" } do |f|
+  #box1.col-xs-12.col-sm-6{class: "col-xs-12 col-sm-6 #{@product.new_record? ? "col-sm-offset-3" : ""}"}
+    .form-group
+      .col-sm-10.col-sm-offset-1
+        = f.text_field :manufacturer, class: 'form-control', id: 'manufacturer', placeholder: I18n.t("#{product_t}.manufacturer")
 
-  .form-group
-    .col-sm-9.col-sm-offset-1
-      = f.button I18n.t("helpers.submit.#{@product.new_record? ? 'create' : 'update'}", model: I18n.t('activerecord.model.product')).html_safe, class: 'btn btn-primary'
+    .form-group
+      .col-sm-10.col-sm-offset-1
+        = f.text_field :model, class: 'form-control', id: 'model', placeholder: I18n.t("#{product_t}.model")
+
+    .form-group
+      .col-sm-10.col-sm-offset-1
+        = f.text_area :description, class: 'form-control', id: 'description', placeholder: I18n.t("#{product_t}.description")
+
+    .form-group
+      .col-sm-10.col-sm-offset-1
+        = f.number_field :size, class: 'form-control', id: 'size', placeholder: I18n.t("#{product_t}.size"), min: '1'
+
+    .form-group
+      .col-sm-10.col-sm-offset-1
+        = f.select :gender, [["Both", nil], ["Male", true], ["Female", false]], class: 'form-control', id: 'gender'
+
+    .form-group
+      .col-sm-10.col-sm-offset-1
+        - hidden = ""
+        - if !@product.new_record?
+          %button.btn.btn-success.change-image{type: :button} Change Image
+          - hidden = "hidden"
+        = f.file_field :image, accept: 'image/png,image/jpg,image/jpeg,image/bmp,image/gif', class: "form-control image-upload #{hidden}"
+
+    .form-group
+      .col-sm-9.col-sm-offset-1
+        = f.button I18n.t("helpers.submit.#{@product.new_record? ? 'create' : 'update'}", model: I18n.t('activerecord.model.product')).html_safe, class: 'btn btn-primary'
+
+.col-xs-12.col-sm-6
+  - hidden = @product.new_record? ? "hidden" : ""
+  %div{class: "#{hidden} thumbnail form-img-preview"}
+    %img{src: !@product.new_record? ? @product.image_path : '', 'data-turbolinks' => true }

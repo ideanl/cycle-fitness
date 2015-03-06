@@ -43,6 +43,7 @@ es:
     model:
       user: "Admón"
       product: "TRANSLATE"
+      question: "TRANSLATE"
     attributes:
       user:
         username: "Nombre de Usuario"
@@ -51,7 +52,10 @@ es:
         password_confirmation: "Confirmación de la Contraseña"
         remember_me: "Recuérdame"
       product:
-        name: "Nombre"
+        manufacturer: "TRANSATE"
+        model: "TRANSLATE"
+        size: "TRANSLATE"
+        description: "TRANSLATE"
       question:
         question: "Pregunta"
         answer: "Respuesta"
@@ -60,9 +64,9 @@ es:
 
   helpers:
     error:
-      create: "Could not create %{controller}."
-      update: "Could not update %{controller}."
+      create: "TRANSLATE %{controller}."
+      update: "TRANSLATE %{controller}."
     submit:
-      create: "<span class='glyphicon glyphicon-plus'></span> Create %{model}"
-      update: "Update %{model}"
-      submit: "Save %{model}"
+      create: "<span class='glyphicon glyphicon-plus'></span> TRANSLATE %{model}"
+      update: "TRANSLATE %{model}"
+      submit: "TRANSLATE %{model}"
