@@ -52,7 +52,10 @@ en:
         password_confirmation: "Password Confirmation"
         remember_me: "Remember Me"
       product:
-        name: "Name"
+        manufacturer: "Manufacturer"
+        model: "Model"
+        size: "Size"
+        description: "Description"
       question:
         question: "Question"
         answer: "Answer"

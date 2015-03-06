@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
     resources :questions
 
-    resources :products, except: 'index'
+    resources :products
     resources :users
   end
 end

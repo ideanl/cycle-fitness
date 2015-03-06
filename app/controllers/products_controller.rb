@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  include Editable
+
   def new
     @product = Product.new
   end
@@ -9,7 +11,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to product_path(id: @product.id)
     else
-      flash_errors(@product)
+      flash_errors
       render 'new'
     end
   end
@@ -24,7 +26,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to product_path(id: @product.id)
     else
-      flash_errors(@product)
+      flash_errors
       render 'edit'
     end
   end
@@ -35,6 +37,6 @@ class ProductsController < ApplicationController
 
   private
     def product_params
-      params.require(:product).permit(:name)
+      params.require(:product).permit(:manufacturer, :model, :size, :description, :gender, :image)
     end
 end
