@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20150218005623) do
   end
 
   create_table "questions", force: true do |t|
-    t.string   "question"
+    t.text     "question"
     t.text     "answer"
     t.datetime "created_at"
     t.datetime "updated_at"

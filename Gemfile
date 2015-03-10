@@ -11,7 +11,7 @@ gem 'jquery-rails'
 gem 'mysql2'
 gem 'rmagick', require: false
 gem 'puma'
-gem 'rails', '4.1.4'
+gem 'rails', '4.2.0'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
